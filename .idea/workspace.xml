@@ -71,7 +71,8 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-16T09:38:21.643Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
@@ -83,6 +84,9 @@
     </key>
     <key name="android.template.-1915797639">
       <recent name="com.example.gachamon" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dam\Documents\GitHub\Nouveau dossier\Gachamon\app\src\main\res\drawable" />
     </key>
   </component>
   <component name="RunManager">
@@ -172,6 +176,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1608112084879" />
+    <state x="92" y="92" width="1736" height="856" key="AVDManager" timestamp="1608115821416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1608115821416" />
     <state x="540" y="295" key="AndroidCreateResourceFileDialog" timestamp="1608111020164">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -196,5 +204,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1608111564425" />
+    <state x="776" y="297" key="chooseDestDirectoryDialog" timestamp="1608116195107">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="776" y="297" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608116195107" />
   </component>
 </project>
