@@ -65,7 +65,7 @@ public class SummonPage extends AppCompatActivity {
                    ArrayList<Pokemon> pokeList = pokeRequest.getResults();
 
 
-                   Pokemon pokemon =  pokeList.get(PokeNum);
+                   Pokemon pokemon =  pokeList.get(PokeNum-1);
                    PokeTextview.setText(pokemon.getName());
 
 
