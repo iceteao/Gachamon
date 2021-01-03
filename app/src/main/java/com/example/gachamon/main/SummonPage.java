@@ -37,7 +37,7 @@ public class SummonPage extends AppCompatActivity {
         PokeTextview = findViewById(R.id.pokeTextView);
         PokeImage = findViewById(R.id.pokeImage);
         Random rand = new Random();
-        PokeNum = rand.nextInt(20);
+        PokeNum = rand.nextInt(811);
 
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://pokeapi.co/api/v2/")
