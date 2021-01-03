@@ -1,14 +1,16 @@
-package com.example.gachamon;
+package com.example.gachamon.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class archive extends AppCompatActivity {
+import com.example.gachamon.R;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_archive);
+        setContentView(R.layout.activity_main);
     }
 }

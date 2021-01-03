@@ -1,4 +1,4 @@
-package com.example.gachamon;
+package com.example.gachamon.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,8 +8,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.gachamon.R;
 import com.example.gachamon.models.PokeRequest;
 import com.example.gachamon.models.Pokemon;
+import com.example.gachamon.pokeapi.PokeapiService;
 
 import java.util.ArrayList;
 import java.util.Random;

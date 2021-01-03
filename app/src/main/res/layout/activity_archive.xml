@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/pokedex_background"
     android:alpha="0.4"
-    tools:context=".archive">
+    tools:context=".main.archive">
 
     <TextView
         android:id="@+id/textView2"

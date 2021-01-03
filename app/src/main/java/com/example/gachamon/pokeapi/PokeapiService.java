@@ -1,4 +1,4 @@
-package com.example.gachamon;
+package com.example.gachamon.pokeapi;
 
 import com.example.gachamon.models.PokeRequest;
 

@@ -1,17 +1,16 @@
-package com.example.gachamon;
+package com.example.gachamon.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.View;
 
-public class Items extends AppCompatActivity {
+import com.example.gachamon.R;
+
+public class Inventory extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_items);
-
+        setContentView(R.layout.activity_inventory);
     }
 }

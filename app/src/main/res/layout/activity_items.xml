@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/item_background"
     android:alpha="0.4"
-    tools:context=".Items">
+    tools:context=".main.Items">
 
     <TextView
         android:id="@+id/itemReturn"
