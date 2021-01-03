@@ -37,6 +37,28 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/Items.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_items.xml" afterDir="false" />
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d7ad145-1b53-49d9-9388-80932def7d01" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_inventory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inventory.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +66,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_28" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_2_API_28_2]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -78,11 +101,17 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-03T16:43:27.354Z" />
     <property name="ResourceManagerPrefKey.ResourceType" value="DRAWABLE" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../assignment-4-currency-converter-iceteao" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.1563580213">
+      <recent name="com.example.gachamon" />
+    </key>
     <key name="android.template.487898177">
       <recent name="com.example.gachamon" />
     </key>
@@ -91,6 +120,9 @@
     </key>
     <key name="android.template.-1915797639">
       <recent name="com.example.gachamon" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dam\Documents\GitHub\Nouveau dossier\Gachamon\app\src\main\res\drawable" />
     </key>
   </component>
   <component name="RunManager">
@@ -166,6 +198,9 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1609697268082">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -188,6 +223,11 @@
     </state>
     <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609694631607" />
     <state width="1877" height="253" key="GridCell.Tab.0.bottom" timestamp="1609698081699">
+    <state x="92" y="92" width="1736" height="856" key="AVDManager" timestamp="1608115821416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1608115821416" />
+    <state x="540" y="295" key="AndroidCreateResourceFileDialog" timestamp="1608111020164">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609698081699" />
@@ -211,5 +251,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="721" y="384" key="edit.logcat.filter.dialog.dimensions/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609695600738" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1608111564425" />
+    <state x="776" y="297" key="chooseDestDirectoryDialog" timestamp="1608116195107">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="776" y="297" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608116195107" />
   </component>
 </project>
