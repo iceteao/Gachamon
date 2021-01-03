@@ -9,10 +9,16 @@
     tools:context=".Items">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/itemReturn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="11dp" />
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Return"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#000000"
+        android:alpha="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

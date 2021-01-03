@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="Pokedex" />
+        <option name="name" value="Pokedex" />
+        <option name="packageNamePattern" value="" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidLayouts">
     <shared>
       <config>
@@ -7,20 +19,31 @@
       </config>
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="P" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Pokedex" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7d7ad145-1b53-49d9-9388-80932def7d01" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/Inventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inventory.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/PokeapiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/SummonPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/models/PokeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/models/Pokemon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_summon_page.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/Items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_items.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_28" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -37,6 +60,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="resourceFile" />
+        <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,14 +75,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_28" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-16T09:38:21.643Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-03T16:43:27.354Z" />
+    <property name="ResourceManagerPrefKey.ResourceType" value="DRAWABLE" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../assignment-4-currency-converter-iceteao" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.487898177">
+      <recent name="com.example.gachamon" />
+    </key>
+    <key name="android.template.-703101928">
       <recent name="com.example.gachamon" />
     </key>
     <key name="android.template.-1915797639">
@@ -73,13 +102,12 @@
       </method>
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="Gachamon.app" />
+      <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ALL_USERS" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -115,16 +143,11 @@
       </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
-        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
-        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
-      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -144,33 +167,49 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1609697268082">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609697268082" />
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608112084879">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1608112084879" />
-    <state x="540" y="295" key="AndroidCreateResourceFileDialog" timestamp="1608111020164">
+    <state x="540" y="295" key="AndroidCreateResourceDirectoryDialog" timestamp="1609694785990">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="540" y="295" key="AndroidCreateResourceFileDialog/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1608111020164" />
-    <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1608112243696">
+    <state x="540" y="295" key="AndroidCreateResourceDirectoryDialog/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609694785990" />
+    <state x="540" y="295" key="AndroidCreateResourceFileDialog" timestamp="1609696543162">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1608112243696" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1608111564425">
+    <state x="540" y="295" key="AndroidCreateResourceFileDialog/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609696543162" />
+    <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1609694631607">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1608111564425" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1608111564425">
+    <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609694631607" />
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom" timestamp="1609698081699">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1608111564425" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1608111564425">
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609698081699" />
+    <state width="1877" height="253" key="GridCell.Tab.0.center" timestamp="1609698081699">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1608111564425" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1608111564425">
+    <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609698081699" />
+    <state width="1877" height="253" key="GridCell.Tab.0.left" timestamp="1609698081699">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1608111564425" />
+    <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609698081698" />
+    <state width="1877" height="253" key="GridCell.Tab.0.right" timestamp="1609698081699">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609698081699" />
+    <state x="788" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1609689569712">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="788" y="255" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609689569712" />
+    <state x="721" y="384" key="edit.logcat.filter.dialog.dimensions" timestamp="1609695600738">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="721" y="384" key="edit.logcat.filter.dialog.dimensions/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1609695600738" />
   </component>
 </project>
