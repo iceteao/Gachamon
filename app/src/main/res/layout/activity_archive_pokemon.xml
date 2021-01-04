@@ -10,7 +10,6 @@
         android:id="@+id/pokeImage1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@android:color/white"
         android:layout_gravity="center_horizontal" />
 
     <TextView

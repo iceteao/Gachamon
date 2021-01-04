@@ -7,6 +7,6 @@ import retrofit2.http.GET;
 
 public interface PokeapiService {
 
-    @GET("pokemon-species?limit=812")
+    @GET("pokemon-species?limit=895")
     Call<PokeRequest> PokeList();
 }
