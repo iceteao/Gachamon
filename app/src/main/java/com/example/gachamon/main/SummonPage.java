@@ -2,6 +2,7 @@ package com.example.gachamon.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
@@ -37,45 +38,110 @@ public class SummonPage extends AppCompatActivity {
         PokeTextview = findViewById(R.id.pokeTextView);
         PokeImage = findViewById(R.id.pokeImage);
         Random rand = new Random();
-        PokeNum = rand.nextInt(810)+1;
+        int Chance = rand.nextInt(100);
 
+        Context context = this;
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://pokeapi.co/api/v2/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        fetchPokemon();
+        if (Chance <= 1 ){
+            PokeNum = rand.nextInt(810)+1;
+            fetchLegendaryPokemon(context,String.valueOf(PokeNum));
 
-        Glide.with(this)
-                .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+PokeNum+".png")
-                .centerCrop()
-                .into(PokeImage);
+        }else{
+            PokeNum = rand.nextInt(810)+1;
+            fetchPokemon(context,String.valueOf(PokeNum));
+        }
+
 
     }
 
-    public void fetchPokemon() {
+    public void fetchPokemon(final Context context, final String Pokenum) {
         PokeapiService service = retrofit.create(PokeapiService.class);
-        Call<PokeRequest> pokeResquestCall = service.PokeList();
+        Call<Pokemon> pokemonCall = service.getPokeByNum(Pokenum);
 
-        pokeResquestCall.enqueue(new Callback<PokeRequest>() {
+        pokemonCall.enqueue(new Callback<Pokemon>() {
             @Override
-            public void onResponse(Call<PokeRequest> call, Response<PokeRequest> response) {
+            public void onResponse(Call<Pokemon> call, Response<Pokemon>  response) {
                 if (response.isSuccessful()){
-                   PokeRequest pokeRequest = response.body();
-                   ArrayList<Pokemon> pokeList = pokeRequest.getResults();
+                   Pokemon pokemon = response.body();
+                    if (pokemon.isIs_legendary() == false){
+                        Log.e("Pokedex","Result" + pokemon.isIs_legendary());
+                        PokeTextview.setText(pokemon.getName());
+                        Glide.with(context)
+                                .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+PokeNum+".png")
+                                .centerCrop()
+                                .into(PokeImage);
 
+                    }else{
+                        if (Integer.valueOf(PokeNum )< 811){
+                            PokeNum++;
+                            fetchPokemon(context,String.valueOf(PokeNum));
 
-                   Pokemon pokemon =  pokeList.get(PokeNum-1);
-                   PokeTextview.setText(pokemon.getName());
+                        }else{
+                            PokeNum--;
+                            fetchPokemon(context,String.valueOf(PokeNum));
+                        }
 
+                        Log.e("Pokedex","Result" + pokemon.isIs_legendary());
+                        Log.e("Pokedex","Result" + PokeNum);
+                    }
 
+                    Log.e("Pokedex","Result" + pokemon.isIs_legendary());
                 }else{
                     Log.e("Pokedex","onResponse" + response.errorBody());
                 }
             }
 
             @Override
-            public void onFailure(Call<PokeRequest> call, Throwable t) {
+            public void onFailure(Call<Pokemon> call, Throwable t) {
+                Log.e("Pokedex","onFailure" + t.getMessage());
+
+            }
+        });
+
+
+    }
+
+    public void fetchLegendaryPokemon(final Context context, final String Pokenum) {
+        PokeapiService service = retrofit.create(PokeapiService.class);
+        Call<Pokemon> pokemonCall = service.getPokeByNum(Pokenum);
+
+        pokemonCall.enqueue(new Callback<Pokemon>() {
+            @Override
+            public void onResponse(Call<Pokemon> call, Response<Pokemon>  response) {
+                if (response.isSuccessful()){
+                    Pokemon pokemon = response.body();
+                        if (pokemon.isIs_legendary() == true){
+                            Log.e("Pokedex","Result" + pokemon.isIs_legendary());
+                            PokeTextview.setText(pokemon.getName());
+                            Glide.with(context)
+                                    .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+PokeNum+".png")
+                                    .centerCrop()
+                                    .into(PokeImage);
+
+                        }else{
+                            if (Integer.valueOf(PokeNum )< 811){
+                                PokeNum++;
+                                fetchLegendaryPokemon(context,String.valueOf(PokeNum));
+
+                            }else{
+                                PokeNum--;
+                                fetchLegendaryPokemon(context,String.valueOf(PokeNum));
+                            }
+
+                            Log.e("Pokedex","Result" + pokemon.isIs_legendary());
+                            Log.e("Pokedex","Result" + PokeNum);
+                        }
+                }else{
+                    Log.e("Pokedex","onResponse" + response.errorBody());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Pokemon> call, Throwable t) {
                 Log.e("Pokedex","onFailure" + t.getMessage());
 
             }

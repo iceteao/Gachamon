@@ -4,6 +4,8 @@ public class Pokemon {
     private String name;
     private String url;
     private int number;
+    private boolean is_legendary;
+
 
     public String getName() {
         return name;
@@ -28,5 +30,13 @@ public class Pokemon {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    public boolean isIs_legendary() {
+        return is_legendary;
+    }
+
+    public void setIs_legendary(boolean is_legendary) {
+        this.is_legendary = is_legendary;
     }
 }

@@ -11,14 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".main.SummonPage"/>
-        <activity android:name=".main.archive">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".main.SummonPage">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
+        <activity android:name=".main.archive"/>
+
         <activity android:name=".main.Inventory" />
         <activity android:name=".main.Items" />
         <activity android:name=".main.MainActivity"/>

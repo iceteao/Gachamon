@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class ListPokemonAdapter extends RecyclerView.Adapter<ListPokemonAdapter.ViewHoler> {
 
     private ArrayList<Pokemon> dataset;
+    private ArrayList<Pokemon> Ldataset;
     private Context context;
 
     public ListPokemonAdapter(Context context) {
@@ -51,6 +52,11 @@ public class ListPokemonAdapter extends RecyclerView.Adapter<ListPokemonAdapter.
 
     public void addListPokemon(ArrayList<Pokemon> pokeList) {
         dataset.addAll(pokeList);
+        notifyDataSetChanged();
+    }
+
+    public void addListLegendaryPokemon(ArrayList<Pokemon> pokeList) {
+        Ldataset.addAll(pokeList);
         notifyDataSetChanged();
     }
 
