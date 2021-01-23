@@ -106,6 +106,7 @@ public class SummonPage extends AppCompatActivity {
                         @Override
                         public void onAnimationEnd(Animator animation) {
                             super.onAnimationEnd(animation);
+                            LN.setClickable(true);
                             PokeGif.animate().alpha(0.0f).setDuration(300);
                             PokeGif.setVisibility(View.GONE);
                             PokeImage.animate().alpha(1.0f).setDuration(300);
