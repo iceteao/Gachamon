@@ -2,13 +2,20 @@ package com.example.gachamon.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.example.gachamon.R;
 import com.example.gachamon.models.PokeRequest;
 import com.example.gachamon.models.Pokemon;
@@ -28,6 +35,7 @@ public class SummonPage extends AppCompatActivity {
     private Retrofit retrofit;
     private TextView PokeTextview;
     private ImageView PokeImage;
+    private ImageView PokeGif;
     private int PokeNum;
 
     @Override
@@ -37,6 +45,8 @@ public class SummonPage extends AppCompatActivity {
 
         PokeTextview = findViewById(R.id.pokeTextView);
         PokeImage = findViewById(R.id.pokeImage);
+        PokeGif = findViewById(R.id.pokeGif);
+
         Random rand = new Random();
         int Chance = rand.nextInt(100);
 
@@ -46,12 +56,56 @@ public class SummonPage extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        if (Chance <= 1 ){
+        if (Chance <= 50 ){
             PokeNum = rand.nextInt(810)+1;
+            Glide.with(context)
+                    .load(R.drawable.pokegif2)
+                    .asGif()
+                    .into(PokeGif);
+
+            PokeGif.animate()
+                    .translationY(PokeGif.getHeight())
+                    .setDuration(7500)
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            PokeGif.animate().alpha(0.0f).setDuration(300);
+                            PokeGif.setVisibility(View.GONE);
+                            PokeImage.animate().alpha(1.0f).setDuration(300);
+                            PokeTextview.animate().alpha(1.0f).setDuration(300);
+                            PokeImage.setVisibility(View.VISIBLE);
+                            PokeTextview.setVisibility(View.VISIBLE);
+                        }
+                    });
+
+
             fetchLegendaryPokemon(context,String.valueOf(PokeNum));
 
         }else{
             PokeNum = rand.nextInt(810)+1;
+
+            Glide.with(context)
+                    .load(R.drawable.pokegif1)
+                    .asGif()
+                    .into(PokeGif);
+
+            PokeGif.animate()
+                    .translationY(PokeGif.getHeight())
+                    .setDuration(7500)
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            PokeGif.animate().alpha(0.0f).setDuration(300);
+                            PokeGif.setVisibility(View.GONE);
+                            PokeImage.animate().alpha(1.0f).setDuration(300);
+                            PokeTextview.animate().alpha(1.0f).setDuration(300);
+                            PokeImage.setVisibility(View.VISIBLE);
+                            PokeTextview.setVisibility(View.VISIBLE);
+                        }
+                    });
+
             fetchPokemon(context,String.valueOf(PokeNum));
         }
 
@@ -73,7 +127,14 @@ public class SummonPage extends AppCompatActivity {
                         Glide.with(context)
                                 .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+PokeNum+".png")
                                 .centerCrop()
-                                .into(PokeImage);
+                                .skipMemoryCache(true)
+                                .into(new GlideDrawableImageViewTarget(PokeImage) {
+                                    @Override
+                                    public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> animation) {
+                                        super.onResourceReady(resource, null); // ignores animation, but handles GIFs properly.
+                                    }
+                                });
+
 
                     }else{
                         if (Integer.valueOf(PokeNum )< 811){
@@ -81,7 +142,7 @@ public class SummonPage extends AppCompatActivity {
                             fetchPokemon(context,String.valueOf(PokeNum));
 
                         }else{
-                            PokeNum--;
+                            PokeNum=-20;
                             fetchPokemon(context,String.valueOf(PokeNum));
                         }
 
@@ -120,7 +181,13 @@ public class SummonPage extends AppCompatActivity {
                             Glide.with(context)
                                     .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+PokeNum+".png")
                                     .centerCrop()
-                                    .into(PokeImage);
+                                    .skipMemoryCache(true)
+                                    .into(new GlideDrawableImageViewTarget(PokeImage) {
+                                        @Override
+                                        public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> animation) {
+                                            super.onResourceReady(resource, null); // ignores animation, but handles GIFs properly.
+                                        }
+                                    });
 
                         }else{
                             if (Integer.valueOf(PokeNum )< 811){
