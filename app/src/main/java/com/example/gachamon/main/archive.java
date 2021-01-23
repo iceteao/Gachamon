@@ -4,9 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.example.gachamon.R;
 import com.example.gachamon.models.ListPokemonAdapter;
@@ -24,11 +25,9 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class archive extends AppCompatActivity {
-    private static final String TAG = "POKEDEX";
     private Retrofit retrofit;
     private ListPokemonAdapter listPokemonAdapter;
     private RecyclerView recyclerView;
-
 
 
     @Override
@@ -50,8 +49,8 @@ public class archive extends AppCompatActivity {
 
         fetchPokemon();
 
+    };
 
-    }
     public void fetchPokemon() {
         PokeapiService service = retrofit.create(PokeapiService.class);
         Call<PokeRequest> pokeResquestCall = service.PokeList();
@@ -76,5 +75,10 @@ public class archive extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void Return(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        this.startActivity(intent);
     }
 }

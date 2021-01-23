@@ -5,23 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
-import com.bumptech.glide.request.target.SimpleTarget;
 import com.example.gachamon.R;
-import com.example.gachamon.models.PokeRequest;
 import com.example.gachamon.models.Pokemon;
 import com.example.gachamon.pokeapi.PokeapiService;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 import retrofit2.Call;
@@ -36,12 +36,15 @@ public class SummonPage extends AppCompatActivity {
     private TextView PokeTextview;
     private ImageView PokeImage;
     private ImageView PokeGif;
+    private LinearLayout LN;
     private int PokeNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summon_page);
+        LN = findViewById(R.id.LN);
+        LN.setClickable(false);
 
         PokeTextview = findViewById(R.id.pokeTextView);
         PokeImage = findViewById(R.id.pokeImage);
@@ -73,6 +76,7 @@ public class SummonPage extends AppCompatActivity {
                         @Override
                         public void onAnimationEnd(Animator animation) {
                             super.onAnimationEnd(animation);
+                            LN.setClickable(true);
                             PokeGif.animate().alpha(0.0f).setDuration(300);
                             PokeGif.setVisibility(View.GONE);
                             PokeImage.animate().alpha(1.0f).setDuration(300);
@@ -217,4 +221,11 @@ public class SummonPage extends AppCompatActivity {
 
 
     }
+
+    public void editActions(final View v){
+
+        Intent intent = new Intent(this, MainActivity.class);
+        this.startActivity(intent);
+    }
+
 }

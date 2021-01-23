@@ -6,6 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <LinearLayout
+        android:id="@+id/LN"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:onClick="editActions"
+        android:orientation="vertical"></LinearLayout>
+
     <ImageView
         android:id="@+id/pokeGif"
         android:layout_width="match_parent"

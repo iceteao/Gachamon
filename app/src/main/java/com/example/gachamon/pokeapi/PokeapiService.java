@@ -5,7 +5,6 @@ import com.example.gachamon.models.Pokemon;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.PATCH;
 import retrofit2.http.Path;
 
 public interface PokeapiService {
@@ -15,4 +14,7 @@ public interface PokeapiService {
 
     @GET("pokemon-species/{Pokenum}/")
     Call<Pokemon> getPokeByNum(@Path("Pokenum") String Pokenum);
+
+    @GET("pokemon/{Pokenum}/")
+    Call<PokeRequest> getPokeSByNum(@Path("Pokenum") String Pokenum);
 }
