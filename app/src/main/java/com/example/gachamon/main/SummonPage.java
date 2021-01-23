@@ -46,16 +46,18 @@ public class SummonPage extends AppCompatActivity {
         PokeTextview = findViewById(R.id.pokeTextView);
         PokeImage = findViewById(R.id.pokeImage);
         PokeGif = findViewById(R.id.pokeGif);
-
+        Context context = this;
         Random rand = new Random();
         int Chance = rand.nextInt(100);
 
-        Context context = this;
+        // Set the base url of the api
+
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://pokeapi.co/api/v2/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
+        // Create a lower probability for the draw of legendary pokemon
         if (Chance <= 50 ){
             PokeNum = rand.nextInt(810)+1;
             Glide.with(context)
@@ -63,6 +65,7 @@ public class SummonPage extends AppCompatActivity {
                     .asGif()
                     .into(PokeGif);
 
+            // Make the gif disappear and the draw after a set duration
             PokeGif.animate()
                     .translationY(PokeGif.getHeight())
                     .setDuration(7500)
@@ -83,8 +86,10 @@ public class SummonPage extends AppCompatActivity {
             fetchLegendaryPokemon(context,String.valueOf(PokeNum));
 
         }else{
+            // If not legendary pokemon then fetch a randomly common pokemon
             PokeNum = rand.nextInt(810)+1;
 
+            //Same concept as previously we load the gif and set it to disappear after a set duration, the draw will appear just after
             Glide.with(context)
                     .load(R.drawable.pokegif1)
                     .asGif()
@@ -112,6 +117,7 @@ public class SummonPage extends AppCompatActivity {
 
     }
 
+    // FetchPokemon will go in the Api, and retrieve the pokemon name and picture
     public void fetchPokemon(final Context context, final String Pokenum) {
         PokeapiService service = retrofit.create(PokeapiService.class);
         Call<Pokemon> pokemonCall = service.getPokeByNum(Pokenum);
@@ -128,6 +134,7 @@ public class SummonPage extends AppCompatActivity {
                                 .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+PokeNum+".png")
                                 .centerCrop()
                                 .skipMemoryCache(true)
+                                // This part allow the picture to remain invisible even if found to not interrupt the summoning ritual
                                 .into(new GlideDrawableImageViewTarget(PokeImage) {
                                     @Override
                                     public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> animation) {
@@ -137,20 +144,16 @@ public class SummonPage extends AppCompatActivity {
 
 
                     }else{
+                        // If it's legendary look for another pokemon
                         if (Integer.valueOf(PokeNum )< 811){
                             PokeNum++;
                             fetchPokemon(context,String.valueOf(PokeNum));
-
+                        //  If the pokenum exceed the max go back to the beginning
                         }else{
-                            PokeNum=-20;
+                            PokeNum = 0;
                             fetchPokemon(context,String.valueOf(PokeNum));
                         }
-
-                        Log.e("Pokedex","Result" + pokemon.isIs_legendary());
-                        Log.e("Pokedex","Result" + PokeNum);
                     }
-
-                    Log.e("Pokedex","Result" + pokemon.isIs_legendary());
                 }else{
                     Log.e("Pokedex","onResponse" + response.errorBody());
                 }
@@ -166,6 +169,7 @@ public class SummonPage extends AppCompatActivity {
 
     }
 
+    // Same as fetchPokemon but this time with legendary one
     public void fetchLegendaryPokemon(final Context context, final String Pokenum) {
         PokeapiService service = retrofit.create(PokeapiService.class);
         Call<Pokemon> pokemonCall = service.getPokeByNum(Pokenum);
@@ -195,12 +199,9 @@ public class SummonPage extends AppCompatActivity {
                                 fetchLegendaryPokemon(context,String.valueOf(PokeNum));
 
                             }else{
-                                PokeNum--;
+                                PokeNum=0;
                                 fetchLegendaryPokemon(context,String.valueOf(PokeNum));
                             }
-
-                            Log.e("Pokedex","Result" + pokemon.isIs_legendary());
-                            Log.e("Pokedex","Result" + PokeNum);
                         }
                 }else{
                     Log.e("Pokedex","onResponse" + response.errorBody());
