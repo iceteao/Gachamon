@@ -6,6 +6,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -13,22 +14,33 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.example.gachamon.R;
+import com.example.gachamon.login.LoginActivity;
+import com.example.gachamon.login.RetrofitClient;
 import com.example.gachamon.models.Pokemon;
 import com.example.gachamon.pokeapi.PokeapiService;
+import com.example.gachamon.pokeapi.RetrofitInterface;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Random;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
 
 
 public class SummonPage extends AppCompatActivity {
@@ -38,6 +50,22 @@ public class SummonPage extends AppCompatActivity {
     private ImageView PokeGif;
     private LinearLayout LN;
     private int PokeNum;
+    RetrofitInterface myAPI;
+    private String Pokelist;
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
+    SharedPreferences pref;
+
+    @Override
+    protected void onStop(){
+        compositeDisposable.clear();
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy(){
+        compositeDisposable.clear();
+        super.onDestroy();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +77,13 @@ public class SummonPage extends AppCompatActivity {
         PokeTextview = findViewById(R.id.pokeTextView);
         PokeImage = findViewById(R.id.pokeImage);
         PokeGif = findViewById(R.id.pokeGif);
+        pref = getSharedPreferences("user_details",MODE_PRIVATE);
         Context context = this;
         Random rand = new Random();
         int Chance = rand.nextInt(100);
+        Retrofit retrofit2 = RetrofitClient.getInstance();
+        myAPI = retrofit2.create(RetrofitInterface.class);
+        String Pokelist;
 
         // Set the base url of the api
 
@@ -88,6 +120,9 @@ public class SummonPage extends AppCompatActivity {
 
 
             fetchLegendaryPokemon(context,String.valueOf(PokeNum));
+            Pokelist = String.valueOf(PokeNum);
+            toPokelist(pref.getString("email",""),Pokelist);
+
 
         }else{
             // If not legendary pokemon then fetch a randomly common pokemon
@@ -117,10 +152,33 @@ public class SummonPage extends AppCompatActivity {
                     });
 
             fetchPokemon(context,String.valueOf(PokeNum));
+            Log.e("pokenul",String.valueOf(PokeNum));
+          //  Pokelist.add(String.valueOf(PokeNum));
+            Pokelist = String.valueOf(PokeNum);
+           toPokelist(pref.getString("email",""),Pokelist);
+            //toPokelist("damdam1","3");
         }
 
 
     }
+    private void toPokelist(String email,  String Pokelist) {
+            compositeDisposable.add(myAPI.toPokelist(email,Pokelist)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(new Consumer<String>() {
+                        @Override
+                        public void accept(String s) throws Exception {
+                            Toast.makeText(SummonPage.this,"Summon success", Toast.LENGTH_LONG).show();
+
+                        }
+                    })
+            );
+
+        }
+
+
+
+
 
     // FetchPokemon will go in the Api, and retrieve the pokemon name and picture
     public void fetchPokemon(final Context context, final String Pokenum) {

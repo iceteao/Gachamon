@@ -12,6 +12,7 @@ import com.example.gachamon.R;
 import com.example.gachamon.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
+
     SharedPreferences prf;
     Intent intent;
     TextView Userlog;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         intent = new Intent(MainActivity.this, LoginActivity.class);
         Userlog = findViewById(R.id.userlog);
         Userlog.setText(prf.getString("email",null));
+
     }
 
     public void Archive(View view) {
@@ -37,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Summon(View view) {
+        SharedPreferences.Editor editor = prf.edit();
+        editor.putString("email",prf.getString("email",null));
+        editor.commit();
         Intent intent = new Intent(this, SummonPage.class);
         this.startActivity(intent);
     }

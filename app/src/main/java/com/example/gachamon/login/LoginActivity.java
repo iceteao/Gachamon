@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gachamon.R;
 import com.example.gachamon.main.MainActivity;
+import com.example.gachamon.main.SummonPage;
 import com.example.gachamon.pokeapi.RetrofitInterface;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
