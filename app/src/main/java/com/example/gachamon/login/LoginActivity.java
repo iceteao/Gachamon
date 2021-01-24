@@ -9,12 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.gachamon.R;
 import com.example.gachamon.main.MainActivity;
-import com.example.gachamon.main.SummonPage;
 import com.example.gachamon.pokeapi.RetrofitInterface;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -29,29 +28,10 @@ public class LoginActivity extends AppCompatActivity {
     SharedPreferences pref;
     EditText edt_email,edt_password;
     Button btn_register,btn_login;
-    String unlogged = "unlogged";
     Intent intent;
     @Override
     protected void onStart() {
-
         super.onStart();
-        checkSession();
-
-    }
-    private void checkSession() {
-        //check if user is logged in
-        //if user is logged in --> move to mainActivity
-
-        SessionManagement sessionManagement = new SessionManagement(LoginActivity.this);
-        String userEmail = sessionManagement.getSession();
-        Log.e("name",userEmail);
-        if(userEmail != unlogged){
-
-        }
-        else {
-            moveToMainActivity();
-        }
-
     }
     @Override
     protected void onStop(){
@@ -100,12 +80,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void registerUser(final String email, final String password) {
-        //View view = getLayoutInflater().inflate(R.layout.signupform,null);
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        // builder.setView(view).show();
-        //EditText edt_email = (EditText) view.findViewById(R.id.edt_email);
-        //EditText reg_password = (EditText) view.findViewById(R.id.edt_password);
-        // compositeDisposable.add(myAPI.registerUser(email,edt_email.getText().toString(),reg_password.getText().toString())
         compositeDisposable.add(myAPI.registerUser(email,password)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -155,24 +129,5 @@ public class LoginActivity extends AppCompatActivity {
 
 
         );
-
-       // checkSession();
-      //  Log.e("name","userEmail");
-
-
-
-
     }
-    private void moveToLogin() {
-        Intent intent = new Intent(LoginActivity.this, LoginActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-    }
-
-    private void moveToMainActivity() {
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-    }
-
 }

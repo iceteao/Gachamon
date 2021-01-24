@@ -281,4 +281,13 @@ public class SummonPage extends AppCompatActivity {
         this.startActivity(intent);
     }
 
+    public void skip(View view) {
+        PokeGif.setVisibility(View.GONE);
+        LN.setClickable(true);
+        PokeGif.animate().alpha(0.0f).setDuration(300);
+        PokeImage.animate().alpha(1.0f).setDuration(300);
+        PokeTextview.animate().alpha(1.0f).setDuration(300);
+        PokeImage.setVisibility(View.VISIBLE);
+        PokeTextview.setVisibility(View.VISIBLE);
+    }
 }
