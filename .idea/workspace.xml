@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="Pokedex" />
+        <option name="name" value="Pokedex" />
+        <option name="packageNamePattern" value="" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidLayouts">
     <shared>
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Pokedex" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="48e8db11-9f33-44d0-9acf-9901a5f0d448" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/main/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/main/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/main/PokeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/main/PokeDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_inventory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inventory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/models/ListPokemonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gachamon/models/ListPokemonAdapter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,9 +132,33 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="690" y="287" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1611500099556">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="287" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611500099556" />
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom" timestamp="1611498641085">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611498641085" />
+    <state width="1877" height="253" key="GridCell.Tab.0.center" timestamp="1611498641084">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611498641084" />
+    <state width="1877" height="253" key="GridCell.Tab.0.left" timestamp="1611498641084">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611498641084" />
+    <state width="1877" height="253" key="GridCell.Tab.0.right" timestamp="1611498641084">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611498641084" />
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1611497991377">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611497991377" />
+    <state x="1027" y="378" key="edit.logcat.filter.dialog.dimensions" timestamp="1611498609305">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1027" y="378" key="edit.logcat.filter.dialog.dimensions/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611498609305" />
   </component>
 </project>

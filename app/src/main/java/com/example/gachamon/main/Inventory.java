@@ -59,7 +59,15 @@ public class Inventory extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     PokeRequest pokeRequest = response.body();
                     ArrayList<Pokemon> pokeList = pokeRequest.getResults();
-                    listPokemonAdapter.addListPokemon(pokeList);
+
+                    for (int i =0; i < pokeList.size(); i++){
+                        Pokemon p = pokeList.get(i);
+                        ArrayList<Pokemon> selectedPokeList = new ArrayList<Pokemon>();
+                        if (p.getNumber()==1)
+                            selectedPokeList.add(p);
+                            listPokemonAdapter.addListPokemon(selectedPokeList);
+                    }
+
 
 
                 } else {
