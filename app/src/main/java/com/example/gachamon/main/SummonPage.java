@@ -154,6 +154,8 @@ public class SummonPage extends AppCompatActivity {
                     });
 
             fetchPokemon(context,String.valueOf(PokeNum));
+            Pokelist = String.valueOf(PokeNum);
+            toPokelist(pref.getString("email",""),Pokelist);
 
         }
 
