@@ -125,7 +125,6 @@ public class PokeDetails extends AppCompatActivity {
 
 
     public void Return(View view) {
-        Intent intent = new Intent(this, archive.class);
-        this.startActivity(intent);
+        finish();
     }
 }
