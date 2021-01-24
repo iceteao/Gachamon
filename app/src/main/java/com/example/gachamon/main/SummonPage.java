@@ -84,7 +84,7 @@ public class SummonPage extends AppCompatActivity {
         Retrofit retrofit2 = RetrofitClient.getInstance();
         myAPI = retrofit2.create(RetrofitInterface.class);
         String Pokelist;
-
+        int[] leglist = {144, 145, 146, 150, 151, 243, 244, 245, 249, 250, 251, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 480, 481, 482, 483, 484, 485, 486, 487, 488, 491, 638, 639, 640, 641, 642, 645, 646, 649, 808, 809};
         // Set the base url of the api
 
         retrofit = new Retrofit.Builder()
@@ -118,8 +118,10 @@ public class SummonPage extends AppCompatActivity {
                         }
                     });
 
-
-            fetchLegendaryPokemon(context,String.valueOf(PokeNum));
+            int randomizer = rand.nextInt(leglist.length);
+            PokeNum = leglist[randomizer];
+           // fetchLegendaryPokemon(context,String.valueOf(PokeNum));
+            fetchPokemon(context,String.valueOf(PokeNum));
             Pokelist = String.valueOf(PokeNum);
             toPokelist(pref.getString("email",""),Pokelist);
 
@@ -152,11 +154,7 @@ public class SummonPage extends AppCompatActivity {
                     });
 
             fetchPokemon(context,String.valueOf(PokeNum));
-            Log.e("pokenul",String.valueOf(PokeNum));
-          //  Pokelist.add(String.valueOf(PokeNum));
-            Pokelist = String.valueOf(PokeNum);
-           toPokelist(pref.getString("email",""),Pokelist);
-            //toPokelist("damdam1","3");
+
         }
 
 
@@ -177,9 +175,6 @@ public class SummonPage extends AppCompatActivity {
         }
 
 
-
-
-
     // FetchPokemon will go in the Api, and retrieve the pokemon name and picture
     public void fetchPokemon(final Context context, final String Pokenum) {
         PokeapiService service = retrofit.create(PokeapiService.class);
@@ -190,7 +185,7 @@ public class SummonPage extends AppCompatActivity {
             public void onResponse(Call<Pokemon> call, Response<Pokemon>  response) {
                 if (response.isSuccessful()){
                    Pokemon pokemon = response.body();
-                    if (pokemon.isIs_legendary() == false){
+       //            if (pokemon.isIs_legendary() == false)  {
                         Log.e("Pokedex","Result" + pokemon.isIs_legendary());
                         PokeTextview.setText(pokemon.getName());
                         Glide.with(context)
@@ -204,9 +199,8 @@ public class SummonPage extends AppCompatActivity {
                                         super.onResourceReady(resource, null); // ignores animation, but handles GIFs properly.
                                     }
                                 });
-
-
-                    }else{
+                  /*  }
+                 else{
                         // If it's legendary look for another pokemon
                         if (Integer.valueOf(PokeNum )< 811){
                             PokeNum++;
@@ -216,7 +210,7 @@ public class SummonPage extends AppCompatActivity {
                             PokeNum = 0;
                             fetchPokemon(context,String.valueOf(PokeNum));
                         }
-                    }
+                    } */
                 }else{
                     Log.e("Pokedex","onResponse" + response.errorBody());
                 }

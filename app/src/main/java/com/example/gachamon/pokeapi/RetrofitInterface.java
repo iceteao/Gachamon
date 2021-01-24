@@ -28,6 +28,11 @@ public interface RetrofitInterface {
     Observable<String> toPokelist(@Field("email") String email,
                                     @Field("pokelist") String Pokelist);
 
+    @POST("getpokemons")
+    @FormUrlEncoded
+    Observable<String> getPokelist(@Field("email") String email);
+
+
 
 
 

@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Inventory(View view) {
+        SharedPreferences.Editor editor = prf.edit();
+        editor.putString("email",prf.getString("email",null));
+        editor.commit();
         Intent intent = new Intent(this, Inventory.class);
         this.startActivity(intent);
     }

@@ -5,8 +5,8 @@
       <filter>
         <option name="logLevel" value="verbose" />
         <option name="logMessagePattern" value="" />
-        <option name="logTagPattern" value="pokenul" />
-        <option name="name" value="pokenul" />
+        <option name="logTagPattern" value="inventory" />
+        <option name="name" value="inventory" />
         <option name="packageNamePattern" value="" />
         <option name="pid" value="" />
       </filter>
@@ -18,7 +18,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="pokenul" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="inventory" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48e8db11-9f33-44d0-9acf-9901a5f0d448" name="Default Changelist" comment="">
@@ -139,47 +139,52 @@
       <screen x="-1920" y="91" width="1920" height="1040" />
     </state>
     <state x="-1506" y="265" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.91.1920.1040@-1920.91.1920.1040" timestamp="1611500486057" />
-    <state x="-1155" y="317" key="#com.intellij.ide.util.MemberChooser" timestamp="1611502244381">
-      <screen x="-1920" y="91" width="1920" height="1040" />
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1611517619715">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1155" y="317" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.91.1920.1040@-1920.91.1920.1040" timestamp="1611502244381" />
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611501752221" />
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611517619715" />
     <state x="690" y="287" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1611500099556">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611500099556" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1611516332260">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1611521393526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="938" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.91.1920.1040@-1920.91.1920.1040" timestamp="1611508431021" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611516332260" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611521393526" />
     <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611498641085" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1611516332260">
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1611521393525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="938" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.91.1920.1040@-1920.91.1920.1040" timestamp="1611508431021" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611516332260" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611521393525" />
     <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611498641084" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1611516332260">
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1611521393525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="938" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.91.1920.1040@-1920.91.1920.1040" timestamp="1611508431021" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611516332260" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611521393525" />
     <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611498641084" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1611516332260">
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1611521393525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="938" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.91.1920.1040@-1920.91.1920.1040" timestamp="1611508431021" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611516332260" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611521393525" />
     <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611498641084" />
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1611497991377">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611497991377" />
-    <state x="-893" y="455" key="edit.logcat.filter.dialog.dimensions" timestamp="1611506486721">
-      <screen x="-1920" y="91" width="1920" height="1040" />
+    <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1611520608776">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="600" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611520608776" />
+    <state x="1027" y="364" key="edit.logcat.filter.dialog.dimensions" timestamp="1611519187506">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-893" y="455" key="edit.logcat.filter.dialog.dimensions/0.0.1920.1040/-1920.91.1920.1040@-1920.91.1920.1040" timestamp="1611506486721" />
+    <state x="1027" y="364" key="edit.logcat.filter.dialog.dimensions/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611519187506" />
     <state x="1027" y="378" key="edit.logcat.filter.dialog.dimensions/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611498609305" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1611509331005">
       <screen x="0" y="0" width="1920" height="1040" />
