@@ -59,7 +59,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dam\Documents\GitHub\Nouveau dossier\Gachamon\app\src\main\res\drawable" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -148,18 +155,18 @@
     </state>
     <state x="-1155" y="317" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.91.1920.1040@-1920.91.1920.1040" timestamp="1611502244381" />
     <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611517619715" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1611523391472">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1611525667574">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611523391472" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611525667574" />
     <state x="690" y="287" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1611500099556">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611500099556" />
-    <state x="92" y="92" width="1736" height="856" key="AVDManager" timestamp="1611523252836">
+    <state x="92" y="92" width="1736" height="856" key="AVDManager" timestamp="1611525990741">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="AVDManager/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611523252836" />
+    <state x="92" y="92" width="1736" height="856" key="AVDManager/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611525990741" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1611523268994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -184,6 +191,10 @@
     <state width="938" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.91.1920.1040@-1920.91.1920.1040" timestamp="1611508431021" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611523268994" />
     <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.8.1920.1080@0.0.1920.1080" timestamp="1611498641084" />
+    <state x="776" y="297" key="chooseDestDirectoryDialog" timestamp="1611525672636">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="776" y="297" key="chooseDestDirectoryDialog/0.0.1920.1040/-1920.91.1920.1040@0.0.1920.1040" timestamp="1611525672636" />
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1611497991377">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

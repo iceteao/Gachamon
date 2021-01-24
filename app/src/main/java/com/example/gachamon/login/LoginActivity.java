@@ -86,7 +86,12 @@ public class LoginActivity extends AppCompatActivity {
                 .subscribe(new Consumer<String>() {
                     @Override
                     public void accept(String s) throws Exception {
-                        Toast.makeText(LoginActivity.this,""+s, Toast.LENGTH_LONG).show();
+                       if (s.contains("400")){
+                           Toast.makeText(LoginActivity.this,"Email already used", Toast.LENGTH_LONG).show();
+                       }
+                       else {
+                           Toast.makeText(LoginActivity.this,"Account registered", Toast.LENGTH_LONG).show();
+                       }
                     }
                 })
         );
@@ -117,7 +122,7 @@ public class LoginActivity extends AppCompatActivity {
                         }
 
                         if (s.contains("204")) {
-                            Toast.makeText(LoginActivity.this, "Email and password does not match", Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, "Incorrect Password", Toast.LENGTH_LONG).show();
                         }
 
                     }

@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         prf = getSharedPreferences("user_details",MODE_PRIVATE);
         intent = new Intent(MainActivity.this, LoginActivity.class);
         Userlog = findViewById(R.id.userlog);
-        Userlog.setText(prf.getString("email",null));
+        Userlog.setText("Welcome " +prf.getString( "email",null));
 
     }
 
