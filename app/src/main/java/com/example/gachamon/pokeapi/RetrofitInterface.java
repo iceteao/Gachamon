@@ -14,7 +14,6 @@ public interface RetrofitInterface {
     @POST("register")
     @FormUrlEncoded
     Observable<String> registerUser(@Field("email") String email,
-                                    //@Field("name") String name,
                                     @Field("password") String password);
 
 
